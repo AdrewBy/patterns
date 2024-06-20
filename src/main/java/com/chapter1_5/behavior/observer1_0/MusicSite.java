@@ -1,23 +1,21 @@
-package com.chapter1_5.behavior.observer;
+package com.chapter1_5.behavior.observer1_0;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class JavaDeveloperJobSite implements Observed {
-
-    List<String> vacancies = new ArrayList<>();
+public class MusicSite implements Observed {
+    List<String> songs = new ArrayList<>();
     List<Observer> subscribers = new ArrayList<>();
 
-    public void addVacancy(String vacancy) {
-        this.vacancies.add(vacancy);
+    public void addSong(String song) {
+        this.songs.add(song);
         notifyObservers();
     }
 
-    public void removeVacancy(String vacancy) {
-        this.vacancies.remove(vacancy);
+    public void removeSong(String song) {
+        this.songs.remove(song);
         notifyObservers();
     }
-
 
     @Override
     public void addObserver(Observer observer) {
@@ -32,7 +30,7 @@ public class JavaDeveloperJobSite implements Observed {
     @Override
     public void notifyObservers() {
         for (Observer observer : subscribers) {
-            observer.handleEvent(this.vacancies);
+            observer.handleEvent(this.songs);
         }
     }
 }

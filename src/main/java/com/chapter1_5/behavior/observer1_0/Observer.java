@@ -1,0 +1,7 @@
+package com.chapter1_5.behavior.observer1_0;
+
+import java.util.List;
+
+public interface Observer {
+    public void handleEvent(List<String> vacancies);
+}

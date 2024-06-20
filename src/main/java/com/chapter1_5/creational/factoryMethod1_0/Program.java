@@ -2,7 +2,7 @@ package com.chapter1_5.creational.factoryMethod1_0;
 
 public class Program {
     public static void main(String[] args) {
-        AthleteFactory athleteFactory = createAthleteBySpecialty("runner");
+        AthleteFactory athleteFactory = createAthleteBySpecialty("swimmer");
         Athlete athlete = athleteFactory.createAthlete();
         athlete.actionAthlete();
     }
